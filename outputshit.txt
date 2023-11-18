@@ -1,0 +1,389 @@
+[-5. -2. 15.  0.]
+Triangles:
+[[ -2.  -2.  15.   1.]
+ [100.   0.  15.   1.]
+ [  0.   1.  15.   1.]]
+Camera position: 
+[3. 0. 0. 1.]
+---------------------
+
+Camera transform:
+
+
+Original triangle: 
+[[ -2.  -2.  15.   1.]
+ [100.   0.  15.   1.]
+ [  0.   1.  15.   1.]]
+Camera transformed triangle: 
+[[-5. -2. 15.  0.]
+ [97.  0. 15.  0.]
+ [-3.  1. 15.  0.]]
+-------------
+
+
+----------------------
+
+Near clipping phase
+
+
+
+Point on plane: [0 0 1 1]
+plane_normal: [0. 0. 1. 0.]
+Triangle to clip:
+[[-5. -2. 15.  0.]
+ [97.  0. 15.  0.]
+ [-3.  1. 15.  0.]]
+d0: 14.0
+Point0: [-5. -2. 15.  0.]
+d1: 14.0
+Point1: [97.  0. 15.  0.]
+d2: 14.0
+Point2: [-3.  1. 15.  0.]
+Length of inside_points: 3
+Length of outside_points: 0
+-------------
+
+
+[[-5. -2. 15.  0.]
+ [97.  0. 15.  0.]
+ [-3.  1. 15.  0.]]
+----------------
+
+
+
+Perspective projection matrix: 
+[[ 1.         0.         0.         0.       ]
+ [ 0.         1.         0.         0.       ]
+ [ 0.         0.        -1.001001  -1.       ]
+ [ 0.         0.        -0.1001001  0.       ]]
+--------------------
+
+
+
+-----------------------
+
+
+Projection phase:
+
+
+Original triangle:
+[[-5. -2. 15.  0.]
+ [97.  0. 15.  0.]
+ [-3.  1. 15.  0.]]
+Resulting triangle: 
+[[-0.33333333 -0.13333333  1.001001    1.        ]
+ [ 6.46666667  0.          1.001001    1.        ]
+ [-0.2         0.06666667  1.001001    1.        ]]
+----------------------
+
+
+
+Triangle after scaling and offset: 
+[[-8.08333333e+01 -3.08333333e+01  1.00100100e+00  1.00000000e+00]
+ [ 1.61916667e+03  2.50000000e+00  1.00100100e+00  1.00000000e+00]
+ [-4.75000000e+01  1.91666667e+01  1.00100100e+00  1.00000000e+00]]
+Point on plane: [0 0 0 0]
+plane_normal: [0. 1. 0. 0.]
+Triangle to clip:
+[[-8.08333333e+01 -3.08333333e+01  1.00100100e+00  1.00000000e+00]
+ [ 1.61916667e+03  2.50000000e+00  1.00100100e+00  1.00000000e+00]
+ [-4.75000000e+01  1.91666667e+01  1.00100100e+00  1.00000000e+00]]
+d0: -30.833333333333343
+Point0: [-80.83333333 -30.83333333   1.001001     1.        ]
+d1: 2.5
+Point1: [1.61916667e+03 2.50000000e+00 1.00100100e+00 1.00000000e+00]
+d2: 19.166666666666668
+Point2: [-47.5         19.16666667   1.001001     1.        ]
+Length of inside_points: 2
+Length of outside_points: 1
+Outside point: [-80.83333333 -30.83333333   1.001001     1.        ]
+Shitooooofff
+Outside point at shitoooff: [-80.83333333 -30.83333333   1.001001     1.        ]
+Thing
+Outside point at loop: [-80.83333333 -30.83333333   1.001001     1.        ]
+after triangle thing: [-80.83333333 -30.83333333   1.001001     1.        ]
+before debug thing: [-80.83333333 -30.83333333   1.001001     1.        ]
+Shittt
+Outside point: [-80.83333333 -30.83333333   1.001001     1.        ]
+ooooooooofffffffffff
+!!!!!!!!!!!!!!!!!
+
+
+
+inside_points[1] = [-47.5         19.16666667   1.001001     1.        ]
+out_triangle1.point_matrix[2] = [1491    0    1    1]
+intersection_between_plane_and_line(point_on_plane, plane_normal, inside_points[1], bullshit, debug=True) =[-60.27777778   0.           1.001001     1.        ]
+All of inside points: 
+[array([1.61916667e+03, 2.50000000e+00, 1.00100100e+00, 1.00000000e+00]), array([-47.5       ,  19.16666667,   1.001001  ,   1.        ])]
+Outside points: 
+[array([-80.83333333, -30.83333333,   1.001001  ,   1.        ])]
+out_triangle1:
+[[1619    2    1    1]
+ [ -47   19    1    1]
+ [1491    0    1    1]]
+!!!!!!!!!!
+
+
+
+VERY GOOD!
+First output triangle:
+[[1619    2    1    1]
+ [ -47   19    1    1]
+ [1491    0    1    1]]
+Second output triangle: 
+[[ -47   19    1    1]
+ [1491    0    1    1]
+ [ -60    0    1    1]]
+Original input triangle: 
+[[-8.08333333e+01 -3.08333333e+01  1.00100100e+00  1.00000000e+00]
+ [ 1.61916667e+03  2.50000000e+00  1.00100100e+00  1.00000000e+00]
+ [-4.75000000e+01  1.91666667e+01  1.00100100e+00  1.00000000e+00]]
+Point on plane: [  0 499   0   0]
+plane_normal: [ 0. -1.  0.  0.]
+Triangle to clip:
+[[1619    2    1    1]
+ [ -47   19    1    1]
+ [1491    0    1    1]]
+d0: 497.0
+Point0: [1619    2    1    1]
+d1: 480.0
+Point1: [-47  19   1   1]
+d2: 499.0
+Point2: [1491    0    1    1]
+Length of inside_points: 3
+Length of outside_points: 0
+Point on plane: [  0 499   0   0]
+plane_normal: [ 0. -1.  0.  0.]
+Triangle to clip:
+[[ -47   19    1    1]
+ [1491    0    1    1]
+ [ -60    0    1    1]]
+d0: 480.0
+Point0: [-47  19   1   1]
+d1: 499.0
+Point1: [1491    0    1    1]
+d2: 499.0
+Point2: [-60   0   1   1]
+Length of inside_points: 3
+Length of outside_points: 0
+Point on plane: [0 0 0 0]
+plane_normal: [1. 0. 0. 0.]
+Triangle to clip:
+[[1619    2    1    1]
+ [ -47   19    1    1]
+ [1491    0    1    1]]
+d0: 1619.0
+Point0: [1619    2    1    1]
+d1: -47.0
+Point1: [-47  19   1   1]
+d2: 1491.0
+Point2: [1491    0    1    1]
+Length of inside_points: 2
+Length of outside_points: 1
+Outside point: [-47  19   1   1]
+Shitooooofff
+Outside point at shitoooff: [-47  19   1   1]
+Thing
+Outside point at loop: [-47  19   1   1]
+after triangle thing: [-47  19   1   1]
+before debug thing: [-47  19   1   1]
+Shittt
+Outside point: [-47  19   1   1]
+ooooooooofffffffffff
+!!!!!!!!!!!!!!!!!
+
+
+
+inside_points[1] = [1491    0    1    1]
+out_triangle1.point_matrix[2] = [ 0 18  1  1]
+intersection_between_plane_and_line(point_on_plane, plane_normal, inside_points[1], bullshit, debug=True) =[ 0.         18.41937581  1.          1.        ]
+All of inside points: 
+[array([1619,    2,    1,    1]), array([1491,    0,    1,    1])]
+Outside points: 
+[array([-47,  19,   1,   1])]
+out_triangle1:
+[[1619    2    1    1]
+ [1491    0    1    1]
+ [   0   18    1    1]]
+!!!!!!!!!!
+
+
+
+VERY GOOD!
+First output triangle:
+[[1619    2    1    1]
+ [1491    0    1    1]
+ [   0   18    1    1]]
+Second output triangle: 
+[[1491    0    1    1]
+ [   0   18    1    1]
+ [   0   18    1    1]]
+Original input triangle: 
+[[1619    2    1    1]
+ [ -47   19    1    1]
+ [1491    0    1    1]]
+Point on plane: [0 0 0 0]
+plane_normal: [1. 0. 0. 0.]
+Triangle to clip:
+[[ -47   19    1    1]
+ [1491    0    1    1]
+ [ -60    0    1    1]]
+d0: -47.0
+Point0: [-47  19   1   1]
+d1: 1491.0
+Point1: [1491    0    1    1]
+d2: -60.0
+Point2: [-60   0   1   1]
+Length of inside_points: 1
+Length of outside_points: 2
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOFFFFFFFFFF
+[[1491    0    1    1]
+ [   0   18    1    1]
+ [   0    0    1    1]]
+Point on plane: [499   0   0   0]
+plane_normal: [-1.  0.  0.  0.]
+Triangle to clip:
+[[1619    2    1    1]
+ [1491    0    1    1]
+ [   0   18    1    1]]
+d0: -1120.0
+Point0: [1619    2    1    1]
+d1: -992.0
+Point1: [1491    0    1    1]
+d2: 499.0
+Point2: [ 0 18  1  1]
+Length of inside_points: 1
+Length of outside_points: 2
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOFFFFFFFFFF
+[[  0  18   1   1]
+ [499  13   1   1]
+ [499  11   1   1]]
+Point on plane: [499   0   0   0]
+plane_normal: [-1.  0.  0.  0.]
+Triangle to clip:
+[[1491    0    1    1]
+ [   0   18    1    1]
+ [   0   18    1    1]]
+d0: -992.0
+Point0: [1491    0    1    1]
+d1: 499.0
+Point1: [ 0 18  1  1]
+d2: 499.0
+Point2: [ 0 18  1  1]
+Length of inside_points: 2
+Length of outside_points: 1
+Outside point: [1491    0    1    1]
+Shitooooofff
+Outside point at shitoooff: [1491    0    1    1]
+Thing
+Outside point at loop: [1491    0    1    1]
+after triangle thing: [1491    0    1    1]
+before debug thing: [1491    0    1    1]
+Shittt
+Outside point: [1491    0    1    1]
+ooooooooofffffffffff
+!!!!!!!!!!!!!!!!!
+
+
+
+inside_points[1] = [ 0 18  1  1]
+out_triangle1.point_matrix[2] = [499  11   1   1]
+intersection_between_plane_and_line(point_on_plane, plane_normal, inside_points[1], bullshit, debug=True) =[499.          11.97585513   1.           1.        ]
+All of inside points: 
+[array([ 0, 18,  1,  1]), array([ 0, 18,  1,  1])]
+Outside points: 
+[array([1491,    0,    1,    1])]
+out_triangle1:
+[[  0  18   1   1]
+ [  0  18   1   1]
+ [499  11   1   1]]
+!!!!!!!!!!
+
+
+
+VERY GOOD!
+First output triangle:
+[[  0  18   1   1]
+ [  0  18   1   1]
+ [499  11   1   1]]
+Second output triangle: 
+[[  0  18   1   1]
+ [499  11   1   1]
+ [499  11   1   1]]
+Original input triangle: 
+[[1491    0    1    1]
+ [   0   18    1    1]
+ [   0   18    1    1]]
+Point on plane: [499   0   0   0]
+plane_normal: [-1.  0.  0.  0.]
+Triangle to clip:
+[[1491    0    1    1]
+ [   0   18    1    1]
+ [   0    0    1    1]]
+d0: -992.0
+Point0: [1491    0    1    1]
+d1: 499.0
+Point1: [ 0 18  1  1]
+d2: 499.0
+Point2: [0 0 1 1]
+Length of inside_points: 2
+Length of outside_points: 1
+Outside point: [1491    0    1    1]
+Shitooooofff
+Outside point at shitoooff: [1491    0    1    1]
+Thing
+Outside point at loop: [1491    0    1    1]
+after triangle thing: [1491    0    1    1]
+before debug thing: [1491    0    1    1]
+Shittt
+Outside point: [1491    0    1    1]
+ooooooooofffffffffff
+!!!!!!!!!!!!!!!!!
+
+
+
+inside_points[1] = [0 0 1 1]
+out_triangle1.point_matrix[2] = [499  11   1   1]
+intersection_between_plane_and_line(point_on_plane, plane_normal, inside_points[1], bullshit, debug=True) =[499.   0.   1.   1.]
+All of inside points: 
+[array([ 0, 18,  1,  1]), array([0, 0, 1, 1])]
+Outside points: 
+[array([1491,    0,    1,    1])]
+out_triangle1:
+[[  0  18   1   1]
+ [  0   0   1   1]
+ [499  11   1   1]]
+!!!!!!!!!!
+
+
+
+VERY GOOD!
+First output triangle:
+[[  0  18   1   1]
+ [  0   0   1   1]
+ [499  11   1   1]]
+Second output triangle: 
+[[  0   0   1   1]
+ [499  11   1   1]
+ [499   0   1   1]]
+Original input triangle: 
+[[1491    0    1    1]
+ [   0   18    1    1]
+ [   0    0    1    1]]
+Amount of drawn triangles: 5
+All triangles: 
+[[  0  18   1   1]
+ [499  13   1   1]
+ [499  11   1   1]]
+[[  0  18   1   1]
+ [  0  18   1   1]
+ [499  11   1   1]]
+[[  0  18   1   1]
+ [499  11   1   1]
+ [499  11   1   1]]
+[[  0  18   1   1]
+ [  0   0   1   1]
+ [499  11   1   1]]
+[[  0   0   1   1]
+ [499  11   1   1]
+ [499   0   1   1]]

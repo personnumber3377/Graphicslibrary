@@ -1,0 +1,23 @@
+Aadan jättiperse on antimateriaa ja se painaa 10kg.
+Elias paukuttaa Aadan jättipersettä koko painollaan ja matka on 15cm (vakionopeudella, eli vastusvoimat ovat yhtä suuret kuin eliaksen paino). Elias paukuttaa tiuhaan tahtiin 5 paukutusta sekunnissa. Kuinka kauan kestää, että energia aadan perseestä loppuu?
+
+
+kokonaisenergia aadan perseessä: 1.7975104e+18  J 
+
+energia yhdessä paukutuksessa: 92.7045 J (erittäin liberaali arvio)
+
+3.9076313e+15  sekuntia eli 124 mil vuotta
+
+------------------------------------------
+
+vain puoli nanogrammaa: 89875517.8737 joulea
+
+
+976907.802975 sek
+
+
+
+
+
+
+

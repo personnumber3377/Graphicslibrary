@@ -1,0 +1,83 @@
+Vertices for triangles number 150 from load_smd_vertices: 
+[array([ 2.6800000e-02, -8.8600000e-01,  3.8117996e+01]), array([ 0.0413  , -0.8848  , 38.112301]), array([ 3.0100000e-02, -9.5150000e-01,  3.8115498e+01])]
+
+
+
+Triangle number 150 in the resulting triangles: 
+[[ 0.  0. 38.  1.]
+ [ 0.  0. 38.  1.]
+ [ 0.  0. 38.  1.]]
+
+
+
+
+Vertices for triangles[149]: [array([ 2.6800000e-02, -8.8600000e-01,  3.8117996e+01]), array([ 0.0413  , -0.8848  , 38.112301]), array([ 3.0100000e-02, -9.5150000e-01,  3.8115498e+01])]
+
+
+
+
+
+
+ Privates
+  76 0.030100 -0.951500 38.115498 0.426502 -0.018100 -0.904305 0.496100 0.791400 3 76 0.530000 78 0.370000 77 0.100000
+  76 0.016700 -0.952100 38.122795 -0.795779 0.058198 -0.602784 0.501400 0.791400 3 76 0.530000 78 0.370000 77 0.100000
+  76 0.026800 -0.886000 38.117996 -0.041598 0.189693 -0.980962 0.494200 0.785000 3 76 0.530000 78 0.370000 77 0.100000
+Privates
+  76 0.026800 -0.886000 38.117996 -0.041598 0.189693 -0.980962 0.494200 0.785000 3 76 0.530000 78 0.370000 77 0.100000
+  76 0.041300 -0.884800 38.112301 0.141203 -0.047901 -0.988821 0.487900 0.785000 3 76 0.530000 78 0.370000 77 0.100000
+  76 0.030100 -0.951500 38.115498 0.426502 -0.018100 -0.904305 0.496100 0.791400 3 76 0.530000 78 0.370000 77 0.100000
+Privates
+  76 0.041300 -0.884800 38.112301 0.141203 -0.047901 -0.988821 0.487900 0.785000 3 76 0.530000 78 0.370000 77 0.100000
+  76 0.026800 -0.886000 38.117996 -0.041598 0.189693 -0.980962 0.494200 0.785000 3 76 0.530000 78 0.370000 77 0.100000
+  76 0.038600 -0.797600 38.113899 -0.365407 0.064401 -0.928617 0.483800 0.776300 3 76 0.530000 78 0.370000 77 0.100000
+Privates
+
+
+Final important do not delete!
+
+
+load_smd_vertices works all fine.
+
+Hi!
+
+I found this here https://developer.valvesoftware.com/wiki/Studiomdl_Data#Vertexanimation but it doesn't actually explain all that much. It only mentions this: "The first target must include all vertices on the mesh in their reference positions; subsequent targets should include only vertices that differ from the reference.". Now is the reference target the frame 0 of the file? Also how does the VTA file correspond to the SMD file? I am trying to make a script which first loads the smd file and then you can apply all of the vertexanimations to said mesh. How does the VTA vertex animation get applied to the SMD base model? In that article they say that the coordinates are absolute world positions for vertices. Which vertices? The vertices in the frame 0 in the VTA file or in the base model in the SMD file?
+
+Thanks in advance for your answer!
+
+
+
+
+
+
+
+
+
+
+
+
+  14 -0.244500 -4.584099 64.176392 0.100599 -0.393996 -0.913590 0.206800 0.200200 1 14 1.000000      71568
+
+  237
+
+
+
+https://steamcommunity.com/discussions/forum/1/3492005739884783584/
+
+
+in the original thing : 4 4.175500 -6.259600 53.900604 0.231192 -0.651377 0.722674 0.165000 0.870300 3 4 0.720000 5 0.180000 3 0.100000
+with Breasts_Larger: 
+
+
+4.20858
+-7.1136
+54.76
+aka 5491 4.208581 -7.113604 54.759979 0.241987 -0.673166 0.698688
+
+the index in the blender software is 7823 while the index on the line is 5491
+
+the index which is actually modified is 1325 ("    1325 0.068900 -0.884400 38.133801 0.671235 -0.054503 -0.739238")
+
+the actual index which we want to modify is: "5491 4.208581 -7.113604 54.759979 0.241987 -0.673166 0.698688"
+
+
+
