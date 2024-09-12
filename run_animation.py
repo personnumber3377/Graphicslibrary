@@ -715,6 +715,50 @@ def load_vta_frame(time, triangles, base_filename, anim_filename=None, offset=np
 	return returned_triangles
 '''
 
+
+'''
+
+import pickle 
+object = Object() 
+filehandler = open(filename, 'w') 
+pickle.dump(object, filehandler)
+
+'''
+
+import pickle
+
+
+
+
+def construct_vertices_dict(vertices): # Generates a search dictionary.
+
+	out = {}
+
+	for i, vert in enumerate(vertices):
+		x, y, z = copy.deepcopy(vert[0]), copy.deepcopy(vert[1]), copy.deepcopy(vert[2])
+		if vert[0] == float("-0.120362"):
+			print("FUUCCCK")
+			exit(0)
+
+		if x == -0.120362:
+			print("qqqq")
+			exit(0)
+
+		if x not in out:
+			out[x] = {} # Create new thing.
+		
+		if y not in out[x]:
+			out[x][y] = {}
+		if z not in out[x][y]:
+			out[x][y][z] = [i]
+		else:
+			#assert False
+			assert isinstance(out[x][y][z], list)
+			out[x][y][z].append(i) # Just add the thing.
+
+	return out # Return the thing.
+
+
 def load_vta_frame(time, triangles, base_filename, anim_filename=None, offset=np.array([0.0,0.0,0.0,0.0]), add=False):
 	
 
@@ -740,7 +784,17 @@ def load_vta_frame(time, triangles, base_filename, anim_filename=None, offset=np
 
 	vertice_shit = {}
 
-	
+	print("lines == "+str(lines))
+
+	filehandler = open("lines.pickle", 'bw') 
+	pickle.dump(lines, filehandler)
+	filehandler.close()
+
+	filehandler = open("vertices.pickle", 'bw') 
+	pickle.dump(vertices, filehandler)
+	filehandler.close()
+
+	vertices_dict = construct_vertices_dict(vertices)
 
 	while "time 1" not in lines[oof]:
 
@@ -748,18 +802,115 @@ def load_vta_frame(time, triangles, base_filename, anim_filename=None, offset=np
 		appendable_thing = lines[oof].split(" ")
 		appendable_thing = remove_values_from_list(appendable_thing, "")
 		#print(appendable_thing)
+
+		'''
+		
+		found = False
 		for vertice in vertices:
 			#print("bullshit")
 			#print(appendable_thing)
+			
 			if vertice[0] == float(appendable_thing[1]) and vertice[1] == float(appendable_thing[2]) and vertice[2] == float(appendable_thing[3]):
 				if int(appendable_thing[0]) not in vertice_shit.keys():
 					vertice_shit[int(appendable_thing[0])] = [another]
-
+					found = True
+					#break
 				else:
+					found = True
 					vertice_shit[int(appendable_thing[0])].append(another)
-
+					#break
 				# 
 			another += 1
+		assert found # We should always find atleast one corresponding thing.
+
+
+		'''
+
+
+		
+		'''
+
+
+while "time 1" not in lines[oof]:
+
+	another = 0
+	appendable_thing = lines[oof].split(" ")
+	appendable_thing = remove_values_from_list(appendable_thing, "")
+	#print(appendable_thing)
+	for vertice in vertices:
+		#print("bullshit")
+		#print(appendable_thing)
+		if vertice[0] == float(appendable_thing[1]) and vertice[1] == float(appendable_thing[2]) and vertice[2] == float(appendable_thing[3]):
+			if int(appendable_thing[0]) not in vertice_shit.keys():
+				vertice_shit[int(appendable_thing[0])] = [another]
+
+			else:
+				vertice_shit[int(appendable_thing[0])].append(another)
+
+			#
+		another += 1
+	oof += 1
+
+	if oof % 1000 == 0:
+		print(oof)
+print("Done")
+
+'''
+
+		
+		found = True
+
+		if float(appendable_thing[1]) not in vertices_dict or float(appendable_thing[2]) not in vertices_dict[float(appendable_thing[1])] or float(appendable_thing[3]) not in vertices_dict[float(appendable_thing[1])][float(appendable_thing[2])]:
+			another = len(vertices) - 1 # Just a handy shortcut. This is to handle the things.
+			found = False
+		else:
+
+			assert float(appendable_thing[1]) in vertices_dict
+			assert float(appendable_thing[2]) in vertices_dict[float(appendable_thing[1])]
+			assert float(appendable_thing[3]) in vertices_dict[float(appendable_thing[1])][float(appendable_thing[2])]
+			orig_len = len(vertices_dict[float(appendable_thing[1])][float(appendable_thing[2])][float(appendable_thing[3])])
+			assert vertices_dict[float(appendable_thing[1])][float(appendable_thing[2])][float(appendable_thing[3])] != [] # Should have something
+			another = vertices_dict[float(appendable_thing[1])][float(appendable_thing[2])][float(appendable_thing[3])]# [0] # Just use the first index
+
+
+			# Remove the first index.
+
+			#vertices_dict[float(appendable_thing[1])][float(appendable_thing[2])][float(appendable_thing[3])].pop(0)
+
+			# vertices_dict[float(appendable_thing[1])][float(appendable_thing[2])][float(appendable_thing[3])].pop(0)
+			# print("vertices_dict[float(appendable_thing[1])][float(appendable_thing[2])][float(appendable_thing[3])] == "+str(vertices_dict[float(appendable_thing[1])][float(appendable_thing[2])][float(appendable_thing[3])]))
+			# new_len = len(vertices_dict[float(appendable_thing[1])][float(appendable_thing[2])][float(appendable_thing[3])])
+			# assert new_len == orig_len - 1 # Sanity
+
+		# Now another is the correct index into the vertices list.
+
+		# if int(appendable_thing[0]) not in vertice_shit.keys():
+
+		
+
+
+
+		if found:
+
+			assert isinstance(another, list)
+
+			if int(appendable_thing[0]) not in vertice_shit.keys():
+				vertice_shit[int(appendable_thing[0])] = another
+				print("int(appendable_thing[0]) == "+str(int(appendable_thing[0])))
+				print("vertice_shit[int(appendable_thing[0])] == "+str(vertice_shit[int(appendable_thing[0])]))
+			else:
+				assert False
+				# vertice_shit[int(appendable_thing[0])].append(another)
+
+				# another
+
+				vertice_shit[int(appendable_thing[0])] = another
+
+				print("int(appendable_thing[0]) == "+str(int(appendable_thing[0])))
+				print("vertice_shit[int(appendable_thing[0])] == "+str(vertice_shit[int(appendable_thing[0])]))
+
+
+
 		oof += 1
 
 		if oof % 1000 == 0:
